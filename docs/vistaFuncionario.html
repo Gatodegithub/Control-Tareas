@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Control De Tareas</title>
+    <!-- Links -->
+    <link rel="shortcut icon" href="img/empresa.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <link rel="stylesheet" href="css/sweetalert2.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+    <!-- Scripts -->
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="js/sweetalert2.min.js"></script>
+    <script src="js/backToTop.js" defer></script>
+    <script src="js/vistaFuncionario.js" defer></script>
+    <!-- <script src="js/bulma.js" defer></script> -->
+</head>
+
+<body>
+
+    <button id="back-to-top-btn"><i class="fas fa-angle-double-up"></i></button>
+
+    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item logo" href="index.html">
+                <img src="img/logo.svg" alt="Logo Empresarial" width="50">
+                <p class="ml-3 is-size-4">Process S.A</p>
+            </a>
+
+            <a role="button" class="navbar-burger is-hidden-tablet" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div class="navbar-menu">
+            <!-- <div class="navbar-start">
+                <a class="navbar-item" href="#ofrecemos">
+                    ¿Qué ofrecemos?
+                </a>
+                <a class="navbar-item" href="precios.html">
+                    Precios
+                </a>
+            </div> -->
+
+            <div class="navbar-end">
+                <!-- <div class="navbar-item">
+                    <div class="field" data-aos="fade-down" data-aos-duration="500">
+                        <a class="has-text-primary is-block" href="contacto.html">
+                            Comunícate con ventas
+                        </a>
+                    </div>
+                </div> -->
+                <!-- <div class="navbar-item">
+                    <div class="field" data-aos="fade-down" data-aos-duration="500">
+                        <a class="has-text-primary is-block" href="registrarse.html">
+                            Registrarse
+                        </a>
+                    </div>
+                </div> -->
+                <!-- <div class="navbar-item">
+                    <div class="field" data-aos="fade-down" data-aos-duration="500">
+                        <button class="button has-text-primary botonLogin" id="botonLogin">
+                            <span class="icon">
+                                <i class="fas fa-user-circle"></i>
+                            </span>
+                            <span>
+                                Cerrar Sesión
+                            </span>
+                        </button>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        </div>
+    </nav>
+
+    <!-- <div class="modal" id="modalLogin">
+        <div class="modal-background"></div>
+        <div class="modal-content box has-text-centered px-6">
+            <div class="field">
+                <span class="icon is-large">
+                    <i class="far fa-user" style="font-size: 3em;"></i>
+                </span>
+            </div>
+            <div class="field">
+                <p class="control has-icons-left has-icons-right">
+                    <input class="input is-medium" type="email" placeholder="Correo Electrónico">
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-envelope"></i>
+                    </span>
+                </p>
+            </div>
+            <div class="field">
+                <p class="control has-icons-left">
+                    <input class="input is-medium" type="password" placeholder="Contraseña">
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-lock"></i>
+                    </span>
+                </p>
+            </div>
+            <div class="field">
+                <p class="control">
+                    <button class="button is-primary is-outlined is-light">
+                        Iniciar sesión
+                    </button>
+                </p>
+            </div>
+            <div class="field">
+                <div class="control">
+                    ¿No tienes una cuenta? <a href="registrarse.html">Registrate gratis</a><br>
+                    <a>¿Olvidaste tu contraseña?</a>
+                </div>
+            </div>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+    </div> -->
+
+    <!-- Contenido Vista -->
+    <section class="seccion-dashboard pl-4">
+        <div class="columns">
+            <div class="column is-12-mobile is-3-tablet is-3-desktop box" id="dashboard">
+                <aside class="menu pt-5">
+                    <p class="menu-label is-size-6">
+                        General
+                    </p>
+                    <ul class="menu-list">
+                        <li><a>Cerrar Sesión</a></li>
+                        <li><a>Dashboard</a></li>
+                    </ul>
+                    <p class="menu-label is-size-6">
+                        Administración
+                    </p>
+                    <ul class="menu-list">
+                        <li><a>Tareas Asignadas</a></li>
+                        <li>
+                            <a class="is-active">Tareas del equipo</a>
+                            <ul class="">
+                                <li><a>Miembros</a></li>
+                                <li><a>Avances</a></li>
+                            </ul>
+                        </li>
+                        <li><a>Flujos de trabajo</a></li>
+                    </ul>
+                    <p class="menu-label is-size-6">
+                        Transacciones
+                    </p>
+                    <ul class="menu-list">
+                        <li><a>Pagos</a></li>
+                    </ul>
+                </aside>
+            </div>
+            <div class="column is-12-mobile is-9-tablet is-9-desktop has-text-centered">
+                <h1 class="title mt-6">Tareas integrantes del equipo</h1>
+                <div class="table-container">
+                    <table class="table is-striped is-hoverable is-fullwidth">
+                        <thead>
+                            <tr>
+                                <th>Esta Semana</th>
+                                <th>Responsable</th>
+                                <th>Estado</th>
+                                <th>Prioridad</th>
+                                <th>Fecha</th>
+                                <th>Tiempo Estimado</th>
+                            </tr>
+                        </thead>
+
+                        <tfoot>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                
+                            </tr>
+                        </tfoot>
+
+                        <tbody>
+                            <tr>
+                                <td>Tarea 1</td>
+                                <td>Aldo</td>
+                                <td><button class="button is-primary is-fullwidth">Listo</button></td>
+                                <td><button class="button is-danger is-fullwidth">Alta</button></td>
+                                <td>sep. 24</td>
+                                <td>2h</td>
+                            </tr>
+                            <tr>
+                                <td>Tarea 2</td>
+                                <td>Boris San Martin</td>
+                                <td><button class="button is-warning is-fullwidth">En proceso</button></td>
+                                <td><button class="button is-danger is-fullwidth">Alta</button></td>
+                                <td>may. 10</td>
+                                <td>2h</td>
+                            </tr>
+                            <tr>
+                                <td>Tarea 3</td>
+                                <td>Miguel Doria</td>
+                                <td><button class="button is-warning is-fullwidth">En proceso</button></td>
+                                <td><button class="button is-fullwidth" style="background-color: rgb(162, 93, 220);">Media</button></td>
+                                <td>may. 10</td>
+                                <td>2h</td>
+                            </tr>
+                            <tr>
+                                <td>Tarea 4</td>
+                                <td>Sebastian</td>
+                                <td><button class="button is-warning is-fullwidth">En proceso</button></td>
+                                <td><button class="button is-fullwidth" style="background-color: rgb(87, 155, 252);">Esperando revisión</button></td>
+                                <td>may. 10</td>
+                                <td>2h</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p class="mb-0">
+                <img src="img/logo.svg" alt="" width="50">
+            </p>
+            <p class="is-size-3 mb-0">Process S.A</p>
+            <p class="mb-0">Todos los derechos reservados © process.com</p>
+            <p>Chile, Puente Alto</p>
+            <ul class="listaFooter">
+                <li><a><img src="img/twitter.svg" alt="twitter icon"></a></li>
+                <li><a><img src="img/linkedin.svg" alt="lineding icon"></a></li>
+                <li><a><img src="img/facebook.svg" alt="facebook icon"></a></li>
+                <li><a><img src="img/youtube.svg" alt="youtube icon"></a></li>
+                <li><a><img src="img/instagram.svg" alt="instagram icon"></a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+
+</html>

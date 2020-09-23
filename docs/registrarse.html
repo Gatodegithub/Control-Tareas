@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Process S.A</title>
+    <!-- Links -->
+    <link rel="shortcut icon" href="img/empresa.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" type="text/plain" />
+    <link rel="stylesheet" href="css/sweetalert2.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+    <!-- Scripts -->
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="js/sweetalert2.min.js"></script>
+    <script src="js/backToTop.js" defer></script>
+    <script src="js/bulma.js" defer></script>
+    <script src="js/registrarse.js" defer></script>
+</head>
+
+<body>
+    <button id="back-to-top-btn"><i class="fas fa-angle-double-up"></i></button>
+
+    <nav class="navbar is-spaced is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item logo" href="index.html">
+                <img src="img/logo.svg" alt="Logo Empresarial" width="50">
+                <p class="ml-3 is-size-4">Process S.A</p>
+            </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="index.html">
+                    Home
+                </a>
+                <a class="navbar-item" href="precios.html">
+                    Precios
+                </a>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="field" data-aos="fade-down" data-aos-duration="500">
+                        <a class="has-text-primary is-block" href="contacto.html">
+                            Comunícate con ventas
+                        </a>
+                    </div>
+                </div>
+                <div class="navbar-item">
+                    <div class="field" data-aos="fade-down" data-aos-duration="500">
+                        <a class="has-text-primary is-block" href="registrarse.html">
+                            Registrarse
+                        </a>
+                    </div>
+                </div>
+                <div class="navbar-item">
+                    <div class="field" data-aos="fade-down" data-aos-duration="500">
+                        <button class="button has-text-primary botonLogin" id="botonLogin">
+                            <span class="icon">
+                                <i class="fas fa-user-circle"></i>
+                            </span>
+                            <span>
+                                Iniciar Sesión
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </nav>
+
+    <div class="modal" id="modalLogin">
+        <div class="modal-background"></div>
+        <div class="modal-content box has-text-centered px-6">
+            <div class="field">
+                <span class="icon is-large">
+                    <i class="far fa-user" style="font-size: 3em;"></i>
+                </span>
+            </div>
+            <div class="field">
+                <p class="control has-icons-left has-icons-right">
+                    <input class="input is-medium" type="email" placeholder="Correo Electrónico">
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-envelope"></i>
+                    </span>
+                </p>
+            </div>
+            <div class="field">
+                <p class="control has-icons-left">
+                    <input class="input is-medium" type="password" placeholder="Contraseña">
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-lock"></i>
+                    </span>
+                </p>
+            </div>
+            <div class="field">
+                <p class="control">
+                    <button class="button is-primary is-outlined is-light">
+                        Iniciar sesión
+                    </button>
+                </p>
+            </div>
+            <div class="field">
+                <div class="control">
+                    ¿No tienes una cuenta? <a href="registrarse.html">Registrate gratis</a><br>
+                    <a>¿Olvidaste tu contraseña?</a>
+                </div>
+            </div>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+
+    <!-- Formulario de registro -->
+    <main class="seccion-uno container">
+        <div class="columns">
+            <div class="column is-half is-offset-one-quarter">
+                <form action="" method="POST">
+                    <div class="field">
+                        <label class="label">Nombre Completo</label>
+                        <div class="control has-icons-left">
+                            <input class="input" type="text" required pattern="[A-Za-z ]{4,15}" id="nombre">
+                            <span class="icon is-left">
+                                <i class="fas fa-user"></i>
+                            </span>
+                        </div>
+                        <p class="is-hidden help is-danger"></p>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Contraseña</label>
+                        <div class="control has-icons-left">
+                            <input class="input" type="password" pattern="[A-Za-z0-9]{8,30}" required id="contrasena" maxlength="30">
+                            <span class="icon is-left">
+                                <i class="fas fa-lock"></i>
+                            </span>
+                        </div>
+                        <p class="is-hidden help is-danger"></p>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Correo Electrónico De Trabajo</label>
+                        <div class="control has-icons-left">
+                            <input class="input" type="email" placeholder="Example@company.com" pattern="^([a-z0-9_\.\+-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$" required id="correo">
+                            <span class="icon is-left">
+                                <i class="fas fa-envelope"></i>
+                            </span>
+                        </div>
+                        <p class="is-hidden help is-danger"></p>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Nombre Del Equipo</label>
+                        <div class="control has-icons-left">
+                            <input class="input" type="text" pattern="[A-Za-z ]{4,15}" required id="nombreEquipo" maxlength="25">
+                            <span class="icon is-left">
+                                <i class="fas fa-users"></i>
+                            </span>
+                        </div>
+                        <p class="is-hidden help is-danger"></p>
+                    </div>
+
+                    <div class="field">
+                        <div class="control">
+                            <label class="checkbox">
+                                <input type="checkbox" required id="terminos">
+                                Acepto los <a href="#">Términos de Uso </a> y <a href="#"> Política de Privacidad</a>
+                            </label>
+                            <p class="is-hidden help is-danger"></p>
+                        </div>
+                    </div>
+
+                    <div class="field is-grouped is-grouped-centered mt-5">
+                        <p class="control">
+                            <button class="button is-primary is-medium mb-6" type="submit" id="botonRegistro">
+                                Submit
+                            </button>
+                        </p>
+                        <p class="control">
+                            <a class="button is-light is-medium">
+                                Cancel
+                            </a>
+                        </p>
+                    </div>
+
+                    <!-- <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label">Escribe algo -></label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field">
+                                <p class="control">
+                                    <input class="input is-static" type="email" value="Escribe algo" contenteditable maxlength="25">
+                                </p>
+                            </div>
+                        </div>
+                    </div> -->
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p class="mb-0">
+                <img src="img/logo.svg" alt="" width="50">
+            </p>
+            <p class="is-size-3 mb-0">Process S.A</p>
+            <p class="mb-0">Todos los derechos reservados © process.com</p>
+            <p>Chile, Puente Alto</p>
+            <ul class="listaFooter">
+                <li><a><img src="img/twitter.svg" alt="twitter icon"></a></li>
+                <li><a><img src="img/linkedin.svg" alt="lineding icon"></a></li>
+                <li><a><img src="img/facebook.svg" alt="facebook icon"></a></li>
+                <li><a><img src="img/youtube.svg" alt="youtube icon"></a></li>
+                <li><a><img src="img/instagram.svg" alt="instagram icon"></a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

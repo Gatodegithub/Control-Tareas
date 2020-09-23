@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Process S.A</title>
+    <!-- Links -->
+    <link rel="shortcut icon" href="img/empresa.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" type="text/plain" />
+    <link rel="stylesheet" href="css/sweetalert2.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/glider.css">
+    <!-- Scripts -->
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="js/sweetalert2.min.js"></script>
+    <script src="js/backToTop.js" defer></script>
+    <script src="js/bulma.js" defer></script>
+    <script src="js/precios.js" defer></script>
+    <script src="js/glider.js" defer></script>
+    <script src="js/contacto.js" defer></script>
+</head>
+
+<body>
+    <button id="back-to-top-btn"><i class="fas fa-angle-double-up"></i></button>
+
+    <nav class="navbar is-spaced is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item logo" href="index.html">
+                <img src="img/logo.svg" alt="Logo Empresarial" width="50">
+                <p class="ml-3 is-size-4">Process S.A</p>
+            </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="index.html">
+                    Home
+                </a>
+                <a class="navbar-item" href="precios.html">
+                    Precios
+                </a>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="field" data-aos="fade-down" data-aos-duration="500">
+                        <a class="has-text-primary is-block" href="contacto.html">
+                            Comunícate con ventas
+                        </a>
+                    </div>
+                </div>
+                <div class="navbar-item">
+                    <div class="field" data-aos="fade-down" data-aos-duration="500">
+                        <a class="has-text-primary is-block" href="registrarse.html">
+                            Registrarse
+                        </a>
+                    </div>
+                </div>
+                <div class="navbar-item">
+                    <div class="field" data-aos="fade-down" data-aos-duration="500">
+                        <button class="button has-text-primary botonLogin" id="botonLogin">
+                            <span class="icon">
+                                <i class="fas fa-user-circle"></i>
+                            </span>
+                            <span>
+                                Iniciar Sesión
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </nav>
+
+    <div class="modal" id="modalLogin">
+        <div class="modal-background"></div>
+        <div class="modal-content box has-text-centered px-6">
+            <div class="field">
+                <span class="icon is-large">
+                    <i class="far fa-user" style="font-size: 3em;"></i>
+                </span>
+            </div>
+            <div class="field">
+                <p class="control has-icons-left has-icons-right">
+                    <input class="input is-medium" type="email" placeholder="Correo Electrónico">
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-envelope"></i>
+                    </span>
+                </p>
+            </div>
+            <div class="field">
+                <p class="control has-icons-left">
+                    <input class="input is-medium" type="password" placeholder="Contraseña">
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-lock"></i>
+                    </span>
+                </p>
+            </div>
+            <div class="field">
+                <p class="control">
+                    <button class="button is-primary is-outlined is-light">
+                        Iniciar sesión
+                    </button>
+                </p>
+            </div>
+            <div class="field">
+                <div class="control">
+                    ¿No tienes una cuenta? <a href="registrarse.html">Registrate gratis</a><br>
+                    <a>¿Olvidaste tu contraseña?</a>
+                </div>
+            </div>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+
+    <!-- Contenido -->
+    <main class="seccion-uno container">
+        <div class="columns">
+            <div class="column has-text-centered is-12-desktop">
+                <h1 class="title mb-3">Comunícate con ventas</h1>
+                <p class="px-6">Comunícate hoy mismo para descubrir cómo process.com puede ayudar a tu empresa. Completa
+                    el siguiente formulario y nuestros expertos te asesorarán sobre las mejores soluciones para
+                    gestionar flujos de trabajo y procesos, incluso de forma remota.</p>
+            </div>
+        </div>
+    </main>
+
+    <section class="container seccion-dos">
+        <div class="columns is-variable is-8-desktop">
+            <div class="column is-4-desktop is-offset-1-tablet">
+
+                <form action="" id="formContact" method="POST">
+                    <div class="field">
+                        <label class="label">Nombre *</label>
+                        <div class="control">
+                            <input id="nombre" class="input" type="text" required pattern="[A-Za-z ]{4,15}" name="destinatario">
+                        </div>
+                        <p class="is-hidden help is-danger"></p>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Correo *</label>
+                        <div class="control has-icons-left has-icons-right">
+                            <input class="input" type="email" pattern="^([a-z0-9_\.\+-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$" required name="cc_to" id="correo">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-envelope"></i>
+                            </span>
+                            <!-- <span class="icon is-small is-right">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </span> -->
+                        </div>
+                        <p class="is-hidden help is-danger"></p>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Asunto *</label>
+                        <div class="control">
+                            <div class="select">
+                                <select name="asunto" required id="asunto">
+                                    <option value="">Seleccionar</option>
+                                    <option value="como mejorar mi empresa">Como mejorar mi empresa</option>
+                                    <option value="problemas al contratar servicios">Problemas al contratar servicios</option>
+                                </select>
+                            </div>
+                            <p class="is-hidden help is-danger"></p>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">¿Cómo puede ayudarte nuestro equipo de ventas?</label>
+                        <div class="control">
+                            <textarea class="textarea" placeholder="Explicanos tu duda" name="message" maxlength="60"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <div class="control">
+                            <label class="checkbox">
+                                <input type="checkbox" required id="terminos">
+                                Acepto los <a href="#">Términos de Uso </a> y <a href="#"> Política de Privacidad</a>
+                            </label>
+                            <p class="is-hidden help is-danger"></p>
+                        </div>
+                    </div>
+
+                    <div class="field is-grouped">
+                        <div class="control">
+                            <button class="button is-link mb-6" type="submit" id="boton">Enviar</button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+
+            <div class="column is-6-desktop is-offset-1-tablet">
+                <h2 class="is-size-3 has-text-centered mb-6">Más de 8 organizaciones en todo el mundo confían en
+                    process.com</h2>
+                <div class="glider-contain">
+                    <div class="glider has-text-centered">
+                        <div><img src="img/visa.png" alt=""></div>
+                        <div><img src="img/coca_cola.png" alt=""></div>
+                        <div><img src="img/uber.png" alt=""></div>
+                        <div><img src="img/walmart.png" alt=""></div>
+                        <div><img src="img/unilever.png" alt=""></div>
+                        <div><img src="img/loreal.png" alt=""></div>
+                        <div><img src="img/aeromexico.png" alt=""></div>
+                    </div>
+
+                    <button aria-label="Previous" class="glider-prev"><i class="fas fa-arrow-left"></i></button>
+                    <button aria-label="Next" class="glider-next"><i class="fas fa-arrow-right"></i></button>
+                    <div role="tablist" class="dots"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p class="mb-0">
+                <img src="img/logo.svg" alt="" width="50">
+            </p>
+            <p class="is-size-3 mb-0">Process S.A</p>
+            <p class="mb-0">Todos los derechos reservados © process.com</p>
+            <p>Chile, Puente Alto</p>
+            <ul class="listaFooter">
+                <li><a><img src="img/twitter.svg" alt="twitter icon"></a></li>
+                <li><a><img src="img/linkedin.svg" alt="lineding icon"></a></li>
+                <li><a><img src="img/facebook.svg" alt="facebook icon"></a></li>
+                <li><a><img src="img/youtube.svg" alt="youtube icon"></a></li>
+                <li><a><img src="img/instagram.svg" alt="instagram icon"></a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!-- Email JS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        emailjs.init('user_BaIzySCVNwOs4gDh9kTFW')
+    </script>
+</body>
+
+</html>

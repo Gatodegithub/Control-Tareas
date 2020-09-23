@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Process S.A</title>
+    <!-- Links -->
+    <link rel="shortcut icon" href="img/empresa.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" type="text/plain" />
+    <link rel="stylesheet" href="css/sweetalert2.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+    <!-- Scripts -->
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="js/sweetalert2.min.js"></script>
+    <script src="js/backToTop.js" defer></script>
+    <script src="js/bulma.js" defer></script>
+    <script src="js/precios.js" defer></script>
+</head>
+
+<body>
+    <button id="back-to-top-btn"><i class="fas fa-angle-double-up"></i></button>
+
+    <nav class="navbar is-spaced is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item logo" href="index.html">
+                <img src="img/logo.svg" alt="Logo Empresarial" width="50">
+                <p class="ml-3 is-size-4">Process S.A</p>
+            </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="index.html">
+                    Home
+                </a>
+                <a class="navbar-item" href="precios.html">
+                    Precios
+                </a>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="field" data-aos="fade-down" data-aos-duration="500">
+                        <a class="has-text-primary is-block" href="contacto.html">
+                            Comunícate con ventas
+                        </a>
+                    </div>
+                </div>
+                <div class="navbar-item">
+                    <div class="field" data-aos="fade-down" data-aos-duration="500">
+                        <a class="has-text-primary is-block" href="registrarse.html">
+                            Registrarse
+                        </a>
+                    </div>
+                </div>
+                <div class="navbar-item">
+                    <div class="field" data-aos="fade-down" data-aos-duration="500">
+                        <button class="button has-text-primary botonLogin" id="botonLogin">
+                            <span class="icon">
+                                <i class="fas fa-user-circle"></i>
+                            </span>
+                            <span>
+                                Iniciar Sesión
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </nav>
+
+    <div class="modal" id="modalLogin">
+        <div class="modal-background"></div>
+        <div class="modal-content box has-text-centered px-6">
+            <div class="field">
+                <span class="icon is-large">
+                    <i class="far fa-user" style="font-size: 3em;"></i>
+                </span>
+            </div>
+            <div class="field">
+                <p class="control has-icons-left has-icons-right">
+                    <input class="input is-medium" type="email" placeholder="Correo Electrónico">
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-envelope"></i>
+                    </span>
+                </p>
+            </div>
+            <div class="field">
+                <p class="control has-icons-left">
+                    <input class="input is-medium" type="password" placeholder="Contraseña">
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-lock"></i>
+                    </span>
+                </p>
+            </div>
+            <div class="field">
+                <p class="control">
+                    <button class="button is-primary is-outlined is-light">
+                        Iniciar sesión
+                    </button>
+                </p>
+            </div>
+            <div class="field">
+                <div class="control">
+                    ¿No tienes una cuenta? <a href="registrarse.html">Registrate gratis</a><br>
+                    <a>¿Olvidaste tu contraseña?</a>
+                </div>
+            </div>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+
+    <!-- Contenido -->
+    <main class="seccion-uno container">
+        <div class="columns">
+            <div class="column has-text-centered is-12-desktop">
+                <h1 class="title mb-3">Empieza tu período de prueba gratis</h1>
+                <p>Usuarios y tableros ilimitados. No se necesita tarjeta de crédito</p>
+                <a class="button mt-4 empezar is-large is-rounded">Empezar ahora</a>
+            </div>
+        </div>
+        <div class="columns">
+            <div class="column has-text-centered contenedor-cantidad">
+                <a class="button button-precio">3 Usuarios Mínimo</a>
+                <a class="button button-precio is-primary">5 Usuarios</a>
+                <a class="button button-precio">10 Usuarios</a>
+                <a class="button button-precio">15 Usuarios</a>
+                <a class="button button-precio">20 Usuarios</a>
+                <a class="button button-precio">25 Usuarios</a>
+                <a class="button button-precio">30+ Usuarios</a>
+            </div>
+        </div>
+    </main>
+
+    <section class="seccion-dos container">
+        <div class="columns has-text-centered precios">
+            <div class="column is-12-mobile is-6-tablet is-3-desktop">
+                <div class="box">
+                    <h3 class="title is-size-5 mb-3">Básico</h3>
+                    <article>
+                        <p class="precio_serv mb-3"><span class="costo mr-2">$8</span><span class="mt-4">Por
+                                usuario<br>Por Mes</span>
+                        </p>
+                        <p class="basico mb-5 valor">Total de $40 / mes</p>
+                        <p style="margin-bottom: 4rem;">Básico incluye:</p>
+                        <hr>
+                        <ul>
+                            <li>Espectadores ilimitados gratis</li>
+                            <li>Más de 20 tipos de columnas</li>
+                            <li>Vista Kanban</li>
+                            <li>Formularios</li>
+                            <li>Apps para iOS y Android</li>
+                            <li>1 tablero por panel</li>
+                            <li>Registro básico de actividad</li>
+                            <li>Autentificación de dos factores (2FA)</li>
+                            <li>Soporte a toda hora</li>
+                            <li>5 GB de almacenamiento</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+
+            <div class="column is-12-mobile is-6-tablet is-3-desktop">
+                <div class="box">
+                    <h3 class="title is-size-5 mb-3">Estándar</h3>
+                    <article>
+                        <p class="precio_serv mb-3 estandar"><span class="costo mr-2">$10</span><span class="mt-4">Por
+                                usuario<br>Por Mes</span>
+                        </p>
+                        <p class="mb-4 estandar valor">Total de $50 / mes</p>
+                        <p class="mb-5">Estándar incluye las funcionalidades del plan básico, <br><span
+                                class="estandar"> además de:</span></p>
+                        <hr>
+                        <ul>
+                            <li>Vista Timeline</li>
+                            <li>Vista Calendario</li>
+                            <li>Vista Mapa</li>
+                            <li>5 integraciones</li>
+                            <li>15 automatizaciones</li>
+                            <li>3 tableros por panel</li>
+                            <li>Registro de actividad ilimitado</li>
+                            <li>Comparte tableros con invitados</li>
+                            <li>Personalización de formularios</li>
+                            <li>Búsqueda avanzada</li>
+                            <li>Creación de plantillas</li>
+                            <li>Integración con E-mail</li>
+                            <li>Integraciones externas</li>
+                            <li>API completa</li>
+                            <li>50 GB de almacenamiento</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+
+            <div class="column is-12-mobile is-6-tablet is-3-desktop">
+                <div class="box">
+                    <h3 class="title is-size-5 mb-3">Pro</h3>
+                    <article>
+                        <p class="precio_serv mb-3 pro"><span class="costo mr-2">$16</span><span class="mt-4">Por
+                                usuario<br>Por Mes</span>
+                        </p>
+                        <p class="mb-4 pro valor">Total de $80 / mes</p>
+                        <p class="mb-5">Pro incluye las funcionalidades del plan Estándar, <br><span class="pro"> además
+                                de:</span></p>
+                        <hr>
+                        <ul>
+                            <li>Columna fórmula</li>
+                            <li>Time tracking</li>
+                            <li>Vista Chart</li>
+                            <li>20 integraciones</li>
+                            <li>60 automatizaciones</li>
+                            <li>10 tableros por panel</li>
+                            <li>Tags personalizados</li>
+                            <li>Cant. ilimitada de invitados</li>
+                            <li>Tableros privados</li>
+                            <li>Autentificación de Google</li>
+                            <li>100 GB de almacenamiento</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+
+            <div class="column is-12-mobile is-6-tablet is-3-desktop">
+                <div class="box">
+                    <h3 class="title is-size-5 mb-3">Corporativo</h3>
+                    <article>
+                        <p class="precio_serv mb-3 corp"><span class="costo mr-2">$20</span><span class="mt-4">Por
+                                usuario<br>Por Mes</span>
+                        </p>
+                        <p class="mb-4 corp valor">Total de $100 / mes</p>
+                        <p class="mb-5">Corporativo incluye las funcionalidades del plan Pro, <br><span
+                                class="corp">además de:</span></p>
+                        <hr>
+                        <ul>
+                            <li>Mayor límite de porcentaje de API</li>
+                            <li>Soporte VIP</li>
+                            <li>Capacitación personalizada</li>
+                            <li>50 integraciones</li>
+                            <li>150 automatizaciones</li>
+                            <li>50 tableros por panel</li>
+                            <li>Manejo de la sesión</li>
+                            <li>Registro de auditoría</li>
+                            <li>99.9% de tiempo en línea</li>
+                            <li>Permisos de cuenta avanzados</li>
+                            <li>Inicio de sesión único (Okta, One login, Azure AD, SAML personalizado)</li>
+                            <li>Soporte prioritario a toda hora con tiempo de respuesta < 30 minutos</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container seccion-dos">
+        <div class="columns has-text-centered">
+            <div class="column is-12-mobile">
+                <h2 class="title">Preguntas Frecuentes</h2>
+            </div>
+        </div>
+        <div class="columns">
+            <div class="column is-8 is-offset-2">
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-item-header is-size-5">
+                            ¿Qué plan es adecuado para mí?
+                        </div>
+                        <div class="accordion-item-body">
+                            <div class="accordion-item-body-content">
+                                Entendemos que cada organización es única, que requiere funciones específicas para
+                                respaldar sus flujos de trabajo y proyectos. Arriba puedes ver las funciones incluidas
+                                en los diferentes planes para satisfacer tus necesidades. También tenemos una prueba Pro
+                                gratuita de 14 días, donde puedes consultar sus funciones y tomar una decisión
+                                informada, sin tener que registrar una tarjeta de crédito. Si necesitas ayuda para
+                                elegir el plan adecuado para ti, comunícate con nuestro equipo de soporte:
+                                support@process.com.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-item-header is-size-5">
+                            ¿Cuánto cuesta process.com?
+                        </div>
+                        <div class="accordion-item-body">
+                            <div class="accordion-item-body-content">
+                                Nuestros precios se basan en 2 variables: la función del plan que te gustaría usar y la
+                                cantidad de usuarios en la plataforma. Una vez que hayas decidido la función del plan y
+                                los usuarios, debes elegir el tipo de pago preferido para tu suscripción: mensual o
+                                anual. El pago se realiza en una cuota inicial (por lo que, si compras un plan por un
+                                año, pagarás un año por adelantado).
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-item-header is-size-5">
+                            ¿Puedo cambiar de opinión?
+                        </div>
+                        <div class="accordion-item-body">
+                            <div class="accordion-item-body-content">
+                                Si has pagado una cuenta anual en los últimos 30 días y, por alguna razón, debes
+                                cancelar la cuenta, tienes derecho a recibir un reembolso completo. Para recibir el
+                                reembolso, simplemente debes cancelar la cuenta y enviar un correo electrónico a
+                                support@process.com, y explicar allí que has cancelado la cuenta y que deseas recibir un
+                                reembolso completo.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-item-header is-size-5">
+                            ¿Process.com ofrece planes para estudiantes?
+                        </div>
+                        <div class="accordion-item-body">
+                            <div class="accordion-item-body-content">
+                                Tenemos un nuevo Programa para estudiantes que ofrece grandes oportunidades y opciones
+                                para estudiantes y organizaciones estudiantiles, a quienes les gustaría implementar
+                                process.com en sus clases. Los estudiantes universitarios o terciarios, las
+                                organizaciones estudiantiles, los centros estudiantiles y las fraternidades pueden
+                                unirse a los programas estudiantiles.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-item-header is-size-5">
+                            ¿Cómo gestiono mi facturación?
+                        </div>
+                        <div class="accordion-item-body">
+                            <div class="accordion-item-body-content">
+                                Cada usuario administrador de la cuenta puede acceder a tu historial de compras, tus
+                                facturas, cambiar tus detalles de pago, cambiar tu plan y mucho más.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-item-header is-size-5">
+                            ¿Puedo cambiar mi plan?
+                        </div>
+                        <div class="accordion-item-body">
+                            <div class="accordion-item-body-content">
+                                Puedes realizar cambios en tu plan en cualquier momento cambiando tu tipo de plan y
+                                agregando o eliminando usuarios (ten en cuenta que después del periodo de reembolso, no
+                                ofrecemos reembolsos por bajar de categoría). Para cambiar tu plan, simplemente dirígete
+                                a la sección Administrador y haz clic en la opción Facturación. Allí, haz clic en
+                                "Cambiar plan", elige el plan deseado y ¡a disfrutar!
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-item-header is-size-5">
+                            ¿Qué métodos de pago aceptan?
+                        </div>
+                        <div class="accordion-item-body">
+                            <div class="accordion-item-body-content">
+                                Aceptamos los siguientes métodos de pago:<br>
+                                ● Todas las principales tarjetas de crédito (sin incluir tarjetas de débito): Visa,
+                                Master Card, American Express, Discover, Diners Club, JCB, Carte Bleue, Union Pay.<br>
+                                ● También puedes comprar tu suscripción de monday.com con PayPal.<br>
+                                ● Aceptamos facturas para pedidos de Enterprise que cumplan con una tarifa mínima. No
+                                dudes en comunicarte con support@process.com para obtener más información.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p class="mb-0">
+                <img src="img/logo.svg" alt="" width="50">
+            </p>
+            <p class="is-size-3 mb-0">Process S.A</p>
+            <p class="mb-0">Todos los derechos reservados © process.com</p>
+            <p>Chile, Puente Alto</p>
+            <ul class="listaFooter">
+                <li><a><img src="img/twitter.svg" alt="twitter icon"></a></li>
+                <li><a><img src="img/linkedin.svg" alt="lineding icon"></a></li>
+                <li><a><img src="img/facebook.svg" alt="facebook icon"></a></li>
+                <li><a><img src="img/youtube.svg" alt="youtube icon"></a></li>
+                <li><a><img src="img/instagram.svg" alt="instagram icon"></a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

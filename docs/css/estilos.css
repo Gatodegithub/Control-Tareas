@@ -1,0 +1,393 @@
+*,*::after,*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+    background-color: rgb(248, 258, 258);
+}
+
+/* Btn to top */
+#back-to-top-btn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 26px;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+    outline: none;
+    border: 3px solid #333;
+    border-radius: 50%;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    transition-property: background-color, color;
+    z-index: 10;
+    /* transition: 0.2s background-color,color ease-in-out; */
+}
+
+#back-to-top-btn:hover, #back-to-top-btn:focus {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Animations */
+.btnEntrace {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-name: btnEntrace;
+}
+/* ZoomIn */
+/* @keyframes btnEntrace {
+    from {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+    to {
+        opacity: 1;
+    }
+} */
+
+@keyframes btnEntrace {
+    from {
+        opacity: 0;
+        transform: translate3d(100%, 0, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.btnExit {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-name: btnExit;
+}
+/* ZoomOut */
+/* @keyframes btnExit {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+} */
+
+@keyframes btnExit {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.empezar {
+    background-color: #ff0476;
+    color: #fff;
+}
+
+.empezar:hover,
+.empezar-blue:hover {
+    color: #fff;
+}
+
+.empezar-blue {
+    background-color: #4353FF;
+    color: #fff;
+}
+
+.navbar-brand .logo {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 40px;
+    line-height: 40px;
+}
+
+h1 ~ p, h2 ~ p {
+    font-size: 23px;
+    line-height: 32px;
+}
+
+.navbar .navbar-brand .logo:hover {
+    color: #4a4a4a;
+}
+
+.navbar-item img {
+    max-height: 3rem;
+}
+
+.navbar-burger {
+    height: initial;
+}
+
+.navbar-burger span {
+    height: 3px;
+}
+
+.seccion-uno {
+    padding-top: 120px;
+}
+
+.seccion-dos {
+    padding-top: 90px;
+}
+
+.glider img {
+    height: 80px;
+}
+
+.fa-arrow-left,
+.fa-arrow-right {
+    font-size: 1em;
+}
+
+@media (max-width: 768px) {
+    .reverse-columns {
+        flex-direction: column-reverse;
+        display: flex;
+    }
+}
+
+.cont-nofi {
+    display: flex;
+    align-items: center;
+}
+
+.imagensita {
+    padding-top: 4px;
+    height: 40px;
+}
+
+.imagensita ~ span {
+    margin-left: 10px;
+}
+
+.notita {
+    background: #f5f6f8;
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+
+
+/* .hero {
+    min-height: calc(100vh - 76px);
+    background-image: linear-gradient(to top, hsla(340, 95%, 50%,0.3) 0%,
+    hsla(317, 45%, 52%,0.1) 100%), url(img/headerBcg.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+} */
+
+
+/* ---------------Pagina Precios---------------- */
+.contenedor-cantidad a {
+    width: 9em;
+}
+
+.columns {
+    flex-wrap: wrap;
+}
+
+.precios .box {
+    height: 97%;
+}
+
+.precios .box:last-of-type {
+    margin-bottom: 1.5rem;
+}
+
+.precios .column:first-child .box {
+    border-top: .5em solid #FB275D;
+}
+.precios .column:nth-child(2) .box {
+    border-top: .5em solid #FFCC00;
+}
+.precios .column:nth-child(3) .box {
+    border-top: .5em solid #00CC6F;
+}
+.precios .column:nth-child(4) .box {
+    border-top: .5em solid  #A358DF;
+}
+
+.precio_serv {
+    display: flex;
+    justify-content: center;
+    color: #FB275D;
+    font-weight: bold;
+}
+
+article .basico {
+    color: #FB275D;
+}
+
+article .estandar {
+    color: #FFCC00;
+}
+
+article .pro {
+    color: #00CC6F;
+}
+
+article .corp {
+    color: #A358DF;
+}
+
+article hr {
+    opacity: .5;
+}
+
+article .basico ~ hr {
+    background-color: #FB275D;
+}
+article .estandar ~ hr {
+    background-color: #FFCC00;
+}
+article .pro ~ hr {
+    background-color: #00CC6F;
+}
+article .corp ~ hr {
+    background-color: #A358DF;
+}
+
+.precio_serv .costo {
+    font-size: 43px;
+}
+
+.precio_serv .costo ~ span {
+    text-align: left;
+    line-height: 1;
+}
+
+article ul li {
+    font-weight: bold;
+    position: relative; 
+    text-align: left;
+    padding-left: 1.3em;
+}
+
+article ul li:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+article ul li::before {
+    content: url(../img/vistobueno.svg);
+    position: absolute;
+    left: 0px;
+    top: 2px;
+}
+
+/* Accordion */
+.accordion {
+    /* width: 65%; */
+    max-width: 1000px;
+    margin: 2rem auto;
+}
+
+.accordion-item {
+    background-color: rgb(248, 258, 258);
+    color: #111;
+    margin: 2.5em 0;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.accordion-item-header {
+    padding: 0.5rem 3rem 0.5rem 1rem;
+    min-height: 3.5rem;
+    line-height: 1.25rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.accordion-item-header::after {
+    content: url(../img/arrowaccordion.svg);
+    position: absolute;
+    right: 1rem;
+    bottom: 8px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.accordion-item-header.active::after {
+    transform: rotate(180deg);
+}
+
+.accordion-item-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.accordion-item-body-content {
+    padding: 1rem;
+    line-height: 1.5rem;
+    border-top: 1px solid;
+    border-image: linear-gradient(to right, transparent, #00d1b2, transparent) 1;
+}
+
+/* Footer */
+.footer {
+    border-top: 1px solid rgb(238, 232, 232);
+    background-color: #f5f5f5;
+    padding-bottom: 3rem;
+}
+
+.footer .listaFooter {
+    margin: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer .listaFooter li {
+    margin-top: 0;
+    padding: 0px 10px;
+}
+
+/* Vista Dashboard */
+.seccion-dashboard {
+    padding-top: 64px;
+}
+
+.menu {
+    border-top: 1px solid rgba(0, 209, 178, 0.1);
+}
+
+.table-container {
+    padding: 0 10px;
+}
+
+.table .button {
+    color: #fff;
+}
+
+.table .button:hover {
+    color: #fff;
+}

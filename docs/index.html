@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Control De Tareas</title>
+    <!-- Links -->
+    <link rel="shortcut icon" href="img/empresa.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="css/sweetalert2.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/glider.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <!-- Scripts -->
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="js/sweetalert2.min.js"></script>
+    <script src="js/backToTop.js" defer></script>
+    <script src="js/bulma.js" defer></script>
+</head>
+
+<body>
+    <button id="back-to-top-btn"><i class="fas fa-angle-double-up"></i></button>
+
+    <nav class="navbar is-spaced is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item logo" href="index.html">
+                <img src="img/logo.svg" alt="Logo Empresarial" width="50">
+                <p class="ml-3 is-size-4">Process S.A</p>
+            </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="#ofrecemos">
+                    ¿Qué ofrecemos?
+                </a>
+                <a class="navbar-item" href="precios.html">
+                    Precios
+                </a>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="field" data-aos="fade-down" data-aos-duration="500">
+                        <a class="has-text-primary is-block" href="contacto.html">
+                            Comunícate con ventas
+                        </a>
+                    </div>
+                </div>
+                <div class="navbar-item">
+                    <div class="field" data-aos="fade-down" data-aos-duration="500">
+                        <a class="has-text-primary is-block" href="registrarse.html">
+                            Registrarse
+                        </a>
+                    </div>
+                </div>
+                <div class="navbar-item">
+                    <div class="field" data-aos="fade-down" data-aos-duration="500">
+                        <button class="button has-text-primary botonLogin" id="botonLogin">
+                            <span class="icon">
+                                <i class="fas fa-user-circle"></i>
+                            </span>
+                            <span>
+                                Iniciar Sesión
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </nav>
+
+    <div class="modal" id="modalLogin">
+        <div class="modal-background"></div>
+        <div class="modal-content box has-text-centered px-6">
+            <div class="field">
+                <span class="icon is-large">
+                    <i class="far fa-user" style="font-size: 3em;"></i>
+                </span>
+            </div>
+            <div class="field">
+                <p class="control has-icons-left has-icons-right">
+                    <input class="input is-medium" type="email" placeholder="Correo Electrónico">
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-envelope"></i>
+                    </span>
+                </p>
+            </div>
+            <div class="field">
+                <p class="control has-icons-left">
+                    <input class="input is-medium" type="password" placeholder="Contraseña">
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-lock"></i>
+                    </span>
+                </p>
+            </div>
+            <div class="field">
+                <p class="control">
+                    <button class="button is-primary is-outlined is-light">
+                        Iniciar sesión
+                    </button>
+                </p>
+            </div>
+            <div class="field">
+                <div class="control">
+                    ¿No tienes una cuenta? <a href="registrarse.html">Registrate gratis</a><br>
+                    <a>¿Olvidaste tu contraseña?</a>
+                </div>
+            </div>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+
+    <section class="container seccion-uno pb-6">
+        <div class="columns is-vcentered">
+            <div class="column is-12-mobile is-6-tablet is-6-desktop has-text-left">
+                <h2 class="mb-4">Donde el trabajo <br> en equipo sucede</h2>
+                <p class="pr-6">Process S.A es el sistema operativo de trabajo que impulsa a los equipos para ejecutar
+                    procesos, proyectos y tareas diarias a su manera.</p>
+                <a class="button mt-6 empezar">Empezar ahora</a>
+            </div>
+            <div class="column is-12-mobile is-6-tablet is-6-desktop has-text-centered-mobile has-text-right">
+                <img src="img/analytics.svg" alt="analytics" width="500">
+            </div>
+        </div>
+    </section>
+
+    <section class="hero is-primary is-bold mt-6">
+        <div class="hero-body">
+            <div class="container">
+                <h2 class="title has-text-centered mb-6 is-size-4-mobile">
+                    Más de 8 organizaciones confían en Process S.A
+                </h2>
+                <div class="glider-contain">
+                    <div class="glider has-text-centered">
+                        <div><img src="img/aeromexico.png" alt=""></div>
+                        <div><img src="img/visa.png" alt=""></div>
+                        <div><img src="img/coca_cola.png" alt=""></div>
+                        <div><img src="img/uber.png" alt=""></div>
+                        <div><img src="img/walmart.png" alt=""></div>
+                        <div><img src="img/unilever.png" alt=""></div>
+                        <div><img src="img/loreal.png" alt=""></div>
+                    </div>
+
+                    <button aria-label="Previous" class="glider-prev"><i class="fas fa-arrow-left"></i></button>
+                    <button aria-label="Next" class="glider-next"><i class="fas fa-arrow-right"></i></button>
+                    <div role="tablist" class="dots"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container seccion-dos">
+        <div class="columns is-vcentered reverse-columns">
+            <div class="column is-12-mobile is-6-tablet is-6-desktop has-text-centered-mobile has-text-right">
+                <img src="img/graphics.svg" alt="analytics" width="500">
+            </div>
+            <div class="column is-10-mobile is-6-tablet is-6-desktop has-text-left">
+                <h2 class="mb-4">Disfruta de trabajar en una plataforma que se adapta a tus necesidades.</h2>
+                <p class="pr-6">Con Process S.A, podemos trabajar según nuestras necesidades y, al mismo tiempo, lograr
+                    que los equipos estén en contacto y empoderados.</p>
+
+                <article class="media mt-5">
+                    <figure class="media-left">
+                        <p class="image is-48x48">
+                            <img src="img/director.png">
+                        </p>
+                    </figure>
+                    <div class="media-content">
+                        <div class="content">
+                            <p>
+                                <strong>Aldo Saavedra</strong> <small>@http_purplesky_</small>
+                                <br>
+                                Director sénior de Operaciones
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="container seccion-dos">
+        <div class="columns is-vcentered">
+            <div class="column is-12-mobile is-6-tablet is-6-desktop has-text-left">
+                <h2 class="mb-4">Libera a tu equipo del trabajo manual tedioso.</h2>
+                <p class="pr-6">Hemos automatizado muchísimos de nuestros procesos más comunes. Ahora podemos dedicar
+                    más tiempo al trabajo que necesita de nuestro talento.</p>
+                <article class="media mt-5">
+                    <figure class="media-left">
+                        <p class="image is-48x48">
+                            <img src="img/directora.png">
+                        </p>
+                    </figure>
+                    <div class="media-content">
+                        <div class="content">
+                            <p>
+                                <strong>Bora San Martina</strong> <small>@b.sanmartina_</small>
+                                <br>
+                                Jefa de operaciones de Marketing Global
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="column is-12-mobile is-6-tablet is-6-desktop has-text-centered-mobile has-text-right">
+                <img src="img/data.svg" alt="analytics" width="500">
+            </div>
+        </div>
+    </section>
+
+    <section class="container seccion-dos">
+        <div class="columns mb-6">
+            <div class="column is-12-mobile is-12-tablet is-12-desktop has-text-centered">
+                <h2 class="is-size-1">Llega más lejos en cada aspecto de tu trabajo</h2>
+            </div>
+        </div>
+        <div class="columns has-text-left is-variable is-3">
+            <div class="column is-12-mobile is-6-tablet is-4-desktop">
+                <div class="card">
+                    <div class="card-content">
+                        <h2 class="mb-5">
+                            Centraliza procesos
+                        </h2>
+                        <p>
+                            Usa automatizaciones sin códigos para eliminar el trabajo manual rutinario y reducir el
+                            error
+                            humano en las tareas repetitivas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="column is-12-mobile is-6-tablet is-4-desktop">
+                <div class="card">
+                    <div class="card-content">
+                        <h2 class="mb-5">
+                            Asigna recursos
+                        </h2>
+                        <p>
+                            Asigna y coordina los proyectos según la capacidad del equipo. Asegúrate de que todos en tu
+                            equipo estén involucrados.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="column is-12-mobile is-12-tablet is-4-desktop">
+                <div class="card">
+                    <div class="card-content">
+                        <h2 class="mb-5">
+                            Gana visibilidad en todos los niveles
+                        </h2>
+                        <p>
+                            Obtén un panorama general superior y en tiempo real sobre tu trabajo para tomar mejores
+                            decisiones antes que los demás.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="ofrecemos" class="mb-6"></div>
+    </section>
+
+    <section class="container seccion-dos">
+        <div class="columns">
+            <div class="column is-12-mobile is-12-desktop has-text-centered">
+                <h2 class="mb-4 title is-size-2">Diseña tus proyectos y flujos de trabajo
+                    en minutos</h2>
+                <p class="">Comienza a toda marcha con plantillas listas y bloques que puedes arrastrar y soltar.</p>
+                <a class="button mt-6 mb-6 empezar-blue is-large is-rounded">Empezar ahora</a>
+                <h2 class="mt-6 mb-4 title is-size-3">Da el primer paso con un tablero</h2>
+                <p>Un tablero es un espacio completamente personalizable donde puedes gestionar proyectos, flujos de trabajo y tareas cotidianas.</p>
+                <img class="mr-6" src="img/grande.png" alt="">
+                <h2 class="mb-4 title is-size-3 mt-6">Cualquier proceso, departamento o industria</h2>
+                <p class="">Equipos y organizaciones de todos los tamaños usan monday.com</p>
+            </div>
+        </div>
+        <div class="columns is-centered">
+            <div class="column is-4-tablet is-4-desktop notita">
+                <p class="cont-nofi">
+                    <img class="imagensita" src="img/group.png">
+                    <span>Trabajo remoto</span>
+                </p>
+            </div>
+            <div class="column is-4-tablet is-4-desktop notita"><p class="cont-nofi"><img class="imagensita" src="img/pm.png"><span>Gestión de proyectos</span></p></div>
+            <div class="column is-4-tablet is-4-desktop notita"><p class="cont-nofi"><img class="imagensita" src="img/software_dev.png"><span>Desarrollo de software</span></p></div>
+            <div class="column is-4-tablet is-3-desktop notita"><p class="cont-nofi"><img class="imagensita" src="img/hr.png"><span>RR.HH</span></p></div>
+            <div class="column is-4-tablet is-3-desktop notita"><p class="cont-nofi"><img class="imagensita" src="img/m.png"><span>Marketing</span></p></div>
+            <div class="column is-4-tablet is-3-desktop notita"><p class="cont-nofi"><img class="imagensita" src="img/mediaproduction.png"><span>Medios y producción</span></p></div>
+            <div class="column is-4-tablet is-3-desktop notita"><p class="cont-nofi"><img class="imagensita" src="img/opsit.png"><span>TI</span></p></div>
+            <div class="column is-4-tablet is-3-desktop notita"><p class="cont-nofi"><img class="imagensita" src="img/sales.png"><span>Ventas</span></p></div>
+        </div>
+    </section>
+
+    <section class="hero is-light mt-6">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title mb-2 is-size-4-mobile">
+                    Comienza tu período de prueba gratis por 14 días
+                </h1>
+                <a class="button mt-6 empezar is-large is-rounded">Empezar ahora</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p class="mb-0">
+                <img src="img/logo.svg" alt="" width="50">
+            </p>
+            <p class="is-size-3 mb-0">Process S.A</p>
+            <p class="mb-0">Todos los derechos reservados © process.com</p>
+            <p>Chile, Puente Alto</p>
+            <ul class="listaFooter">
+                <li><a><img src="img/twitter.svg" alt="twitter icon"></a></li>
+                <li><a><img src="img/linkedin.svg" alt="lineding icon"></a></li>
+                <li><a><img src="img/facebook.svg" alt="facebook icon"></a></li>
+                <li><a><img src="img/youtube.svg" alt="youtube icon"></a></li>
+                <li><a><img src="img/instagram.svg" alt="instagram icon"></a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="js/glider.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
